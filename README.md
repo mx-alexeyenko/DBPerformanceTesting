@@ -1,6 +1,3 @@
-# DBPerformanceTesting
-
-
 ## Cassandra
 
 ### *Cassandra install*
