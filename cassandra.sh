@@ -69,31 +69,31 @@ THREAD_NUMBER=1
 
 
 
-# 10 000 000
-# A
-echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloada -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_A8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloada  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraA8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
+# # 10 000 000
+# # A
+# echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloada -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_A8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloada  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraA8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
 
 
-# B
-echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadb -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_B8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadb  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraB8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
+# # B
+# echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadb -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_B8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadb  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraB8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
 
 
-# C
-echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadc -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_C8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadc  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
+# # C
+# echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadc -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_C8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadc  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
 
 
-# U
-echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadu -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_U8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadu  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraU8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
+# # U
+# echo "EXECUTING A6_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadu -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraINSERT_U8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run cassandra-cql -p hosts="127.0.0.1" -p port=9042 -s -P $YCSB_PATH/workloads/workloadu  -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/cassandra/8/t${THREAD_NUMBER}/cassandraU8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID cqlsh -e "use ycsb; TRUNCATE usertable;"
 
