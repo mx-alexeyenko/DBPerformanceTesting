@@ -72,27 +72,27 @@ THREAD_NUMBER=1
 
 
 
-# 10 000 000
-# A
-echo "EXECUTING A8_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloada -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERT_A8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloada -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresA8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
+# # 10 000 000
+# # A
+# echo "EXECUTING A8_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloada -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERT_A8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloada -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresA8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
 
-# B
-echo "EXECUTING B8_$THREAD $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadb -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/prostgresINSERT_B8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadb -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresB8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
+# # B
+# echo "EXECUTING B8_$THREAD $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadb -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/prostgresINSERT_B8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadb -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresB8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
 
-# C
-echo "EXECUTING C8_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadc -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERTC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadc -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
+# # C
+# echo "EXECUTING C8_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadc -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERTC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadc -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresC8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
 
-# U
-echo "EXECUTING U8_$THREAD_NUMBER $ATTEMPT ..."
-$YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadu -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERT_U8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-$YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadu -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresU8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
-docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
+# # U
+# echo "EXECUTING U8_$THREAD_NUMBER $ATTEMPT ..."
+# $YCSB_PATH/bin/ycsb.sh load postgrenosql -s -P $YCSB_PATH/workloads/workloadu -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p recordcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresINSERT_U8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# $YCSB_PATH/bin/ycsb.sh run postgrenosql -s -P $YCSB_PATH/workloads/workloadu -P $YCSB_PATH/postgrenosql-binding/conf/postgrenosql.properties -p operationcount=5000000 -threads $THREAD_NUMBER -p exportfile=/$YCSB_PATH/results/postgres/8/t${THREAD_NUMBER}/postgresU8_T${THREAD_NUMBER}_A${ATTEMPT}.txt
+# docker exec -it $CONTAINER_ID psql -h localhost -p 5432 -U postgres -d test -c "DELETE FROM usertable"
